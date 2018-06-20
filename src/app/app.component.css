@@ -1,0 +1,22 @@
+:host {
+    display: block;
+    height: 100%;
+    position: relative;
+    background-color: red;
+}
+
+.content-container {
+    width: 500px;
+    height: 500px;
+    background-color: blue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.large-content {
+    width: 5000px;
+    height: 5000px;
+    background-image:url('https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX20923239.jpg');
+}
