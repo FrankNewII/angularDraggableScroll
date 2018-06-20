@@ -4,7 +4,7 @@ export interface DraggableScrollInterfaceConfig {
 }
 
 export class DraggableScrollConfig implements DraggableScrollInterfaceConfig {
-    hideScrollbars = false;
+    hideScrollbars = true;
     inertia = true;
     stopScrollOnMouseleave = true;
 

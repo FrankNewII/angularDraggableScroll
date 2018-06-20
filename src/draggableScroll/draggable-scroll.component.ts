@@ -14,7 +14,7 @@ import {DraggableScrollState} from "./drag-state.class";
              (mousemove)="drag($event)"
              (mouseleave)="leave($event)"
              (mouseup)="stopDrag($event)">
-            <ng-content></ng-content>
+            <ng-content [class.dragging]="_state.isPressed"></ng-content>
         </div>
     `,
     styles: [`
@@ -22,6 +22,11 @@ import {DraggableScrollState} from "./drag-state.class";
             display: block;
             overflow: hidden;
             height: 100%;
+        }
+        
+        .draging {
+            user-select: none;
+            pointer-events: none;
         }
 
         .wrapper {
@@ -45,9 +50,9 @@ export class DraggableScrollComponent
 
     _isVisibleScrollbars: boolean;
 
+    _state = new DraggableScrollState;
     private _config: DraggableScrollConfig;
     private _inertia: DraggableScrollInertia;
-    private _state = new DraggableScrollState;
 
     startDrag(ev: MouseEvent) {
         this._state.startDragX = ev.clientX + this._wrapperEml.nativeElement.scrollLeft;
