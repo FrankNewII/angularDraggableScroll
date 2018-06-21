@@ -14,7 +14,7 @@ import {DraggableScrollState} from "./drag-state.class";
              (mousemove)="drag($event)"
              (mouseleave)="leave($event)"
              (mouseup)="stopDrag($event)">
-            <ng-content [class.dragging]="_state.isPressed"></ng-content>
+            <ng-content [class.draging]="_state.isPressed"></ng-content>
         </div>
     `,
     styles: [`
