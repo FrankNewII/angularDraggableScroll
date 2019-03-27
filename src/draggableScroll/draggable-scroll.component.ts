@@ -64,7 +64,7 @@ export class DraggableScrollComponent
     drag(ev: MouseEvent) {
 
         if (this._state.isPressed) {
-            var draggedElm = this._wrapperEml.nativeElement;
+            let draggedElm = this._wrapperEml.nativeElement;
 
             draggedElm.scrollLeft = this._state.calcMoveX(ev.clientX);
             draggedElm.scrollTop = this._state.calcMoveY(ev.clientY);
